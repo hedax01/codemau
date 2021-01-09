@@ -3,3 +3,5 @@ ativate virtual env
 pip install django
 see django command
   django-admin
+create new project 
+  django-admin startproject project_name
