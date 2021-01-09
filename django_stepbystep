@@ -1,0 +1,5 @@
+python -m venv env
+ativate virtual env
+pip install django
+see django command
+  django-admin
