@@ -5,3 +5,19 @@ see django command
   django-admin
 create new project 
   django-admin startproject project_name
+create new app
+  python manage startapp app_name
+create new file 'urls.py' in new app folder
+register new app url in project urls.py
+create template and static follow structure
+  store html files: app_name->templates->app_name 
+  store static files: app_name->static->app_name
+register app: in project settings.py add
+  'app_name.apps.app_nameConfig',
+load static 
+  {% load static %} ->top of html file
+create data table (migration)
+  python manage.py makemigrations
+  python manage.py migrate
+create superuser for admin
+  python manage.py createsuperuser
