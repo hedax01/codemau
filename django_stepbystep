@@ -7,6 +7,9 @@ create new project
   django-admin startproject project_name
 create new app
   python manage startapp app_name
+create urls:
+  import views
+  path('path/' views.def_func, name='...')
 create new file 'urls.py' in new app folder
 register new app url in project urls.py
 create template and static follow structure
@@ -21,3 +24,36 @@ create data table (migration)
   python manage.py migrate
 create superuser for admin
   python manage.py createsuperuser
+
+work with database:
+  add model class in models.py
+  class Table_Name(models.Model):
+    title = models.CharField()
+    ....
+  
+from django.utils import timezone ->timezone.now()
+
+from django.contrib.auth.models import User
+
+-> author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+make change in database 
+  python manage.py makemigrations
+   -> like ASP.Net
+make update database
+  python manage.py sqlmigrate app_name xxx
+  python manage.py migrate
+interactive django object
+  python manage.py shell
+  from django.contrib.auth.models import User
+  User.objects.all()
+  -> show all User
+  User.objects.first()
+  User.objects.filter(username='name')
+  User.objects.filter(username='name').first
+  User.objects.get(id=1)
+  user = User(username=""...)
+  user.save()
+  user.ccc_set()->see
+register models (show off in admin page)
+  add admin.site.register(ClassModel) in admin.py
